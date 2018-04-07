@@ -6,7 +6,7 @@
 * Shubhangi Gupta
 * Dileep Pandey
 
-## Instructions
+## Instructions for Server
 
 ### Installation on Windows
 
@@ -16,11 +16,26 @@
 
     sudo npm install
 
-### Run the app on Windows
+### Run the server on Windows
 
     SET DEBUG=msd:* & npm start
 
-### Run app on Linux/macOS
+### Run the server on Linux/macOS
 
     DEBUG=msd:* npm start
 
+## Instructions for Client
+
+Go to <code>client</code> folder inside root directory.
+
+### Installation on Windows
+
+    npm install
+
+### Installation on Linux/macOS
+
+    sudo npm install
+
+### Run client
+
+    ng serve

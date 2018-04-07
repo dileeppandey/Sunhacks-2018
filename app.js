@@ -23,7 +23,8 @@ connection.connect();
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'jade');
 
-app.use(express.static(__dirname));
+// app.use(express.static(__dirname, 'app'));
+// app.use(express.static('app/public'))
 
 app.use(logger('dev'));
 app.use(express.json());

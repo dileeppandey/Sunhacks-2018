@@ -20,6 +20,16 @@ function BankingController($scope, $cookieStore, $http) {
 	console.log(err)
     })
 
-    
+    $http.get("http://localhost:3000/api/getGridDetails?name=saving").then(function(res){
+	$scope.savingData = res.data[0].content
+    }).catch(function(err){
+	console.log(err)
+    })
+
+    $http.get("http://localhost:3000/api/getGridDetails?name=checking").then(function(res){
+	$scope.checkingData = res.data[0].content
+    }).catch(function(err){
+	console.log(err)
+    })
     
 }

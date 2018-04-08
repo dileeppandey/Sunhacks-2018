@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-md-6 col-xs-12">
 		<rd-widget>
-			<rd-widget-body>
+			<rd-widget-body uib-popover="{{savingData}}" popover-title="Balance requirement" popover-placement="bottom" popover-trigger="outsideClick">
 				<div class="widget-icon green pull-left" style="position:relative;top:-12px">
 					<i class="fa fa-users"></i>
 				</div>
@@ -12,7 +12,7 @@
 	</div>
 	<div class="col-md-6 col-xs-12">
 		<rd-widget>
-			<rd-widget-body>
+			<rd-widget-body uib-popover="{{checkingData}}" popover-title="Balance requirement" popover-placement="bottom" popover-trigger="outsideClick">
 				<div class="widget-icon red pull-left" style="position:relative;top:-12px">
 					<i class="fa fa-tasks"></i>
 				</div>

@@ -36,4 +36,8 @@ function MasterCtrl($scope, $cookieStore) {
     window.onresize = function() {
         $scope.$apply();
     };
+
+    $scope.sideBarOptions= ["Banking","Investments", "Govenment Id", "Ernst Handel"];
+
+    
 }

@@ -76,17 +76,18 @@ function MasterCtrl($scope, $cookieStore, $http) {
     };
 
     // Call backend API here
-    $http.get("APIURL/getSidebarWhateverIStheAPI").then(function (res) {
+    $http.get("http://localhost:3000/api/getNavbarItem").then(function (res) {
         // Now you need to know the API RESPONSE STRUCTURE
         // REMEMBER this res.data is just an example. You need to see
         // what the backend is sending
         // To check the response, you can console.log(res) to see json structure
         // coming from the server
+        console.log(res.data);
         $scope.sideBarOptions = res.data
     }).catch(function (err) {
         console.log(err)
     })
-    $scope.sideBarOptions = ["Banking", "Govenment Id", "Investments", "Telephonic Carrier"];
+   // $scope.sideBarOptions = ["Banking", "Govenment Id", "Investments", "Telephonic Carrier"];
 
 
 }

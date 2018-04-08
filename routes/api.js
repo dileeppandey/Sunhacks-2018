@@ -4,8 +4,10 @@ var router = express.Router();
 const mysql = require('mysql');
 const ArrayList = require('arraylist');
 
+
 var q = require('q');
 
+ 
 
 // First you need to create a connection to the db
 var connection = mysql.createConnection({

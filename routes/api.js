@@ -17,7 +17,7 @@ var connection = mysql.createConnection({
 
 function fetch_Navbar() {
     var deferred = q.defer();
-    connection.connect();
+    // connection.connect();
     var list = new ArrayList;
     connection.query('SELECT navItem from Navbar', function (err, rows, fields) {
         if (err)
@@ -42,7 +42,7 @@ function fetch_Navbar() {
 
 
     });
-    connection.end();
+    // connection.end();
     return deferred.promise;
 
 }
@@ -54,9 +54,9 @@ function fetch_Navbar() {
 
 function fetch_checkings() {
     var deferred = q.defer();
-    connection.connect();
+    // connection.connect();
     // var list = new ArrayList;
-    connection.query('SELECT B.BankName, L.state , C.Checking FROM Bank B INNER JOIN Location L INNER JOIN LocationSpecificBankDetails C ON B.BankId = C.BankId AND C.LocationId = L.id WHERE L.state = "Arizona" AND C.Checking = 1', function (err, rows, fields) {
+    connection.query('SELECT B.BankName, L.state FROM Bank B INNER JOIN Location L INNER JOIN LocationSpecificBankDetails C ON B.BankId = C.BankId AND C.LocationId = L.id WHERE L.state = "Arizona" AND C.Checking = 1', function (err, rows, fields) {
         if (err)
             deferred.reject(err);
         else{
@@ -79,7 +79,7 @@ function fetch_checkings() {
 
 
     });
-    connection.end();
+    // connection.end();
     return deferred.promise;
 
 }
@@ -91,9 +91,9 @@ function fetch_checkings() {
 
 function fetch_savings() {
     var deferred = q.defer();
-    connection.connect();
+    // connection.connect();
     // var list = new ArrayList;
-    connection.query('SELECT B.BankName, L.state , C.Saving FROM Bank B INNER JOIN Location L INNER JOIN LocationSpecificBankDetails C ON B.BankId = C.BankId AND C.LocationId = L.id WHERE L.state = "Arizona" AND C.Saving = 1', function (err, rows, fields) {
+    connection.query('SELECT B.BankName, L.state FROM Bank B INNER JOIN Location L INNER JOIN LocationSpecificBankDetails C ON B.BankId = C.BankId AND C.LocationId = L.id WHERE L.state = "Arizona" AND C.Saving = 1', function (err, rows, fields) {
         if (err)
             deferred.reject(err);
         else{
@@ -116,7 +116,7 @@ function fetch_savings() {
 
 
     });
-    connection.end();
+    // connection.end();
     return deferred.promise;
 
 }

@@ -8,13 +8,32 @@
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="./public/stylesheets/style.css">
   <title>sMSD</title>
+  <script>
+      function openNav() {
+          document.getElementById("mySidenav").style.display = "block";
+      }
+      function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+          document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+  </script>
 </head>
 
 <body>
-  <h1 class="text-center">App</h1>
-  <div class="container">
-    Start here...
-  </div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  <h1 class="welcomeMessage">Welcome to Helper!!</h1>
+</div>
 </body>
 
 </html>

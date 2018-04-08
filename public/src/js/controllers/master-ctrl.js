@@ -11,7 +11,6 @@ function MasterCtrl($scope, $cookieStore, $http) {
     /**
      * Sidebar Toggle & Cookie Control
      */
-    console.log('inside master');
     var mobileView = 992;
     var that = this;
     var crd = {};

@@ -48,7 +48,7 @@ function MasterCtrl($scope, $cookieStore, $http) {
     }).catch(function(err){
 	console.log(err)
     })
-    // $scope.sideBarOptions= ["Banking","Investments", "Govenment Id", "Ernst Handel"];
+    $scope.sideBarOptions= ["Banking","Investments", "Govenment Id", "Ernst Handel"];
 
     
 }

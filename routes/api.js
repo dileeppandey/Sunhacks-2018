@@ -125,6 +125,44 @@ function fetch_savings() {
 
 
 
+function fetch_grid(value) {
+    var deferred = q.defer();
+    // connection.connect();
+    // var list = new ArrayList;
+    var pass_val = value + '%';
+    connection.query('SELECT G.content FROM NavItemOptions G INNER JOIN Navbar N ON G.navbarId = N.id WHERE G.navItemOption like ?',pass_val , function (err, rows, fields) {
+        if (err)
+            deferred.reject(err);
+        else{
+            console.log('The solution is: ', rows);
+
+            // var keys = Object.keys(rows);
+            // for (var i = 0; i < keys.length; i++) {
+            //
+            //     var value = JSON.stringify(rows[keys[i]]).split(':');
+            //
+            //     var j = value[1].indexOf('}');
+            //     var new_val = value[1].slice(0, j)
+            //     list.add(JSON.parse(new_val));
+            //
+            // }
+
+
+            deferred.resolve(rows);
+        }
+
+
+    });
+    // connection.end();
+    return deferred.promise;
+
+}
+
+
+
+
+
+
 /* GET users listing. */
 router.get('/', function (req, res) {
     res.send('respond with a resource');
@@ -178,6 +216,23 @@ router.get("/getSavingsDetails",function(req,res){
         });
 
 });
+
+
+
+router.get("/getGridDetails",function(req,res){
+    fetch_grid(req.query.name)
+        .then(function(rows){
+            // This function get called, when success
+
+            res.send(rows);
+        },function(error){
+            // This function get called, when error
+            res.send(error);
+
+        });
+
+});
+
 
 
 module.exports = router;

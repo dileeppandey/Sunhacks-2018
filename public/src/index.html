@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en" ng-app="RDash">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>RDash AngularJS</title>
+  <title>RDash AngularJS</title>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
   <!-- STYLES -->
   <!-- build:css lib/css/main.min.css -->
   <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
@@ -17,43 +19,54 @@
   <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
   <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
   <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
   <!-- endbuild -->
   <!-- Custom Scripts -->
-  <script type="text/javascript" src="js/dashboard.min.js"></script>
+  <script type="text/javascript " src="js/dashboard.min.js "></script>
 </head>
+<<<<<<< HEAD
 <body ng-controller="MasterCtrl as $ctrl">
   <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+=======
+
+<body ng-controller="MasterCtrl ">
+  <div id="page-wrapper " ng-class="{ 'open': toggle} " ng-cloak>
+>>>>>>> 686c812ef4b07667d69de901052ae28fa447fddd
 
     <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-      <ul class="sidebar">
-        <li class="sidebar-main">
-          <a ng-click="toggleSidebar()">
-            Dashboard
-            <span class="menu-icon glyphicon glyphicon-transfer"></span>
+    <div id="sidebar-wrapper ">
+      <ul class="sidebar ">
+        <li class="sidebar-main ">
+          <a ng-click="toggleSidebar() ">
+            <span>Helper<span id="blink-underscore">_</span></span>
+            <span class="menu-icon glyphicon glyphicon-transfer "></span>
           </a>
         </li>
-        <li class="sidebar-title"><span>Solutions</span></li>
-        <li class="sidebar-list" ng-repeat="option in sideBarOptions">
-          <a href="#/{{option}}">{{option}}<span class="menu-icon fa fa-tachometer"></span></a>
+        <li class="sidebar-title ">
+          <span>Solutions</span>
         </li>
-       <!--  <li class="sidebar-list">
-          <a href="#/tables">Tables <span class="menu-icon fa fa-table"></span></a>
+        <li class="sidebar-list " ng-repeat="option in sideBarOptions ">
+          <a href="#/{{option}} ">{{option}}
+            <span class="menu-icon fa fa-tachometer "></span>
+          </a>
+        </li>
+        <!--  <li class="sidebar-list ">
+          <a href="#/tables ">Tables <span class="menu-icon fa fa-table "></span></a>
         </li> -->
       </ul>
-      <div class="sidebar-footer">
-        <div class="col-xs-4">
-          <a href="https://github.com/rdash/rdash-angular" target="_blank">
+      <div class="sidebar-footer ">
+        <div class="col-xs-4 ">
+          <a href="https://github.com/rdash/rdash-angular " target="_blank ">
             Github
           </a>
         </div>
-        <div class="col-xs-4">
-          <a href="https://github.com/rdash/rdash-angular/blob/master/README.md" target="_blank">
+        <div class="col-xs-4 ">
+          <a href="https://github.com/rdash/rdash-angular/blob/master/README.md " target="_blank ">
             About
           </a>
         </div>
-        <div class="col-xs-4">
-          <a href="#">
+        <div class="col-xs-4 ">
+          <a href="# ">
             Support
           </a>
         </div>
@@ -61,17 +74,22 @@
     </div>
     <!-- End Sidebar -->
 
-    <div id="content-wrapper">
-      <div class="page-content">
+    <div id="content-wrapper ">
+      <div class="page-content ">
 
         <!-- Header Bar -->
         <div class="row header " style="background:#30426a;color:#fff;height:90px; ">
+<<<<<<< HEAD
           <div class="col-xs-10 text-center ">
             <h1>International Personal Guide</h1>
           </div>
           <div class="col-xs-2 text-right">
             <i class="fa fa-map-marker"></i>
             <span id="location-title">{{$ctrl.state}}</span>
+=======
+          <div class="col-xs-12 text-center ">
+            <h1>International Personal Guide</h1>
+>>>>>>> 686c812ef4b07667d69de901052ae28fa447fddd
           </div>
         </div>
         <!-- End Header Bar -->
@@ -79,8 +97,12 @@
         <!-- Main Content -->
         <div ui-view></div>
 
-      </div><!-- End Page Content -->
-    </div><!-- End Content Wrapper -->
-  </div><!-- End Page Wrapper -->
+      </div>
+      <!-- End Page Content -->
+    </div>
+    <!-- End Content Wrapper -->
+  </div>
+  <!-- End Page Wrapper -->
 </body>
+
 </html>

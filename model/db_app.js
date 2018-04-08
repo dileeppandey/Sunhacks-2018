@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 const ArrayList = require('ArrayList');
 var express = require('express');
+var q = require('q');
 
 
 // First you need to create a connection to the db
@@ -13,35 +14,45 @@ var connection = mysql.createConnection({
 
 var app = express();
 
+fetch_Navbar()
+    .then(function(rows){
+        // This function get called, when success
+        console.log(rows);
+    },function(error){
+        // This function get called, when error
+        console.log(error);
 
-fetch_Navbar(function(id) {
-    console.log(id);
-});
-function fetch_Navbar(result) {
-    connection.connect();
-    var list = new ArrayList;
-    connection.query('SELECT navItem from Navbar', function(err, rows, fields) {
-        if (!err){
-            // console.log('The solution is: ', rows);
-
-            var keys = Object.keys(rows);
-            for (var i = 0; i < keys.length; i++) {
-                // var output = Object.toString(rows);
-
-                var value = JSON.stringify(rows[keys[i]]).split(':');
-
-                var j = value[1].indexOf('}');
-                list.add(value[1].slice(0,j));
-
-            }
-            // list.flatten;
-            result(list);
-        }
-
-        else
-            console.log('Error while performing Query.');
     });
-    connection.end();
+
+function fetch_Navbar() {
+    var deferred = q.defer();
+        connection.connect();
+        var list = new ArrayList;
+        connection.query('SELECT navItem from Navbar', function (err, rows, fields) {
+            if (err)
+                deferred.reject(err);
+            else{
+                // console.log('The solution is: ', rows);
+                console.log(rows);
+                var keys = Object.keys(rows);
+                for (var i = 0; i < keys.length; i++) {
+                    // var output = Object.toString(rows);
+
+                    var value = JSON.stringify(rows[keys[i]]).split(':');
+
+                    var j = value[1].indexOf('}');
+                    list.add(value[1].slice(0, j));
+
+                }
+                // list.flatten;
+                deferred.resolve(list);
+            }
+
+
+        });
+        connection.end();
+        return deferred.promise;
+
 }
 
 

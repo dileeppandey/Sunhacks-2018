@@ -20,7 +20,7 @@ body {
 }
 
 #location-title {
-  padding:16px;
+  padding:16px!important;
 }
 
 .sidenav {

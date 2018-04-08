@@ -14,6 +14,7 @@ function MasterCtrl($scope, $cookieStore, $http) {
     var mobileView = 992;
     var that = this;
     var crd = {};
+    $scope.isLocationAvailable = false;
 
     function getLocation() {
         console.log('inside getlocation');
@@ -43,6 +44,7 @@ function MasterCtrl($scope, $cookieStore, $http) {
                 }
             }
             that.state = state;
+            $scope.isLocationAvailable = true;
         }, function errorCallback(response) {
             console.log('Error in getting location');
         });

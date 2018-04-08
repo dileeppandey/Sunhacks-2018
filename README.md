@@ -27,7 +27,7 @@
 
 ## Instructions for Client
 
-Go to <code>client</code> folder inside root directory.
+Go to <code>public</code> folder inside root directory.
 
 ### Installation on Windows
 
@@ -39,4 +39,4 @@ Go to <code>client</code> folder inside root directory.
 
 ### Run client
 
-    ng serve
+    gulp

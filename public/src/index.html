@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en" ng-app="RDash">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>RDash AngularJS</title>
+  <title>RDash AngularJS</title>
   <!-- STYLES -->
   <!-- build:css lib/css/main.min.css -->
   <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
@@ -21,7 +22,8 @@
   <!-- Custom Scripts -->
   <script type="text/javascript" src="js/dashboard.min.js"></script>
 </head>
-<body ng-controller="MasterCtrl">
+
+<body ng-controller="MasterCtrl as $ctrl">
   <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
 
     <!-- Sidebar -->
@@ -33,11 +35,15 @@
             <span class="menu-icon glyphicon glyphicon-transfer"></span>
           </a>
         </li>
-        <li class="sidebar-title" style="margin-top: 12px;"><span>Solutions</span></li>
-        <li class="sidebar-list" ng-repeat="option in sideBarOptions">
-          <a href="#/{{option}}">{{option}}<span class="menu-icon fa fa-tachometer"></span></a>
+        <li class="sidebar-title" style="margin-top: 12px;">
+          <span>Solutions</span>
         </li>
-       <!--  <li class="sidebar-list">
+        <li class="sidebar-list" ng-repeat="option in sideBarOptions">
+          <a href="#/{{option}}">{{option}}
+            <span class="menu-icon fa fa-tachometer"></span>
+          </a>
+        </li>
+        <!--  <li class="sidebar-list">
           <a href="#/tables">Tables <span class="menu-icon fa fa-table"></span></a>
         </li> -->
       </ul>
@@ -65,9 +71,13 @@
       <div class="page-content">
 
         <!-- Header Bar -->
-        <div class="row header" style="background:#30426a;color:#fff;height:90px; ">
-          <div class="col-xs-12 text-center">
-	    <h1>International Personal Guide</h1>
+        <div class="row header " style="background:#30426a;color:#fff;height:90px; ">
+          <div class="col-xs-10 text-center ">
+            <h1>International Personal Guide</h1>
+          </div>
+          <div class="col-xs-2 text-right">
+            <i class="fa fa-map-marker"></i>
+            <span id="location-title">{{$ctrl.state}}</span>
           </div>
         </div>
         <!-- End Header Bar -->
@@ -75,8 +85,12 @@
         <!-- Main Content -->
         <div ui-view></div>
 
-      </div><!-- End Page Content -->
-    </div><!-- End Content Wrapper -->
-  </div><!-- End Page Wrapper -->
+      </div>
+      <!-- End Page Content -->
+    </div>
+    <!-- End Content Wrapper -->
+  </div>
+  <!-- End Page Wrapper -->
 </body>
+
 </html>

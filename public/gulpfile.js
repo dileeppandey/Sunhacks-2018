@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
-    minifyHTML = require('gulp-htmlmin');
+    minifyHTML = require('gulp-htmlmin'),
+    gutil = require('gulp-util');
 
 var paths = {
     scripts: 'src/js/**/*.*',
@@ -56,6 +57,7 @@ gulp.task('custom-images', function() {
 
 gulp.task('custom-js', function() {
     return gulp.src(paths.scripts)
+        .pipe(minifyJs().on('error', gutil.log))
         .pipe(minifyJs())
         .pipe(concat('dashboard.min.js'))
         .pipe(gulp.dest('dist/js'));

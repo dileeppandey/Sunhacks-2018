@@ -1,0 +1,7 @@
+.sidebar {
+  flex-direction: column!important;
+}
+
+.sidebar .row {
+  margin:0px important;
+}

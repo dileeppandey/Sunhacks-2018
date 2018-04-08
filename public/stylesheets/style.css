@@ -12,6 +12,12 @@ body {
   transition: background-color .5s;
 }
 
+.title{
+  font-style: normal;
+  font-family: Tahoma;
+  color : #0D3349;
+  aligment : center;
+}
 .sidenav {
   height: 100%;
   width: 200px;
@@ -48,7 +54,8 @@ body {
 
 #main {
   transition: margin-left .5s;
-  padding: 16px;
+  margin-top:-25px;
+  margin-left: 14%;
 }
 
 .nav {

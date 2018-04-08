@@ -20,7 +20,7 @@ angular.module('RDash').config(['$stateProvider', '$urlRouterProvider',
                 templateUrl: 'templates/tables.html'
             })
 	    .state('Banking', {
-                url: '/Banking',
+                url: '/Bank Account',
                 templateUrl: 'templates/banking.html',
 		controller : 'BankingController'
             })

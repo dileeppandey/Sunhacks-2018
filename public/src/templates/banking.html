@@ -34,12 +34,11 @@
 				<div class="table-responsive">
 					<table class="table">
 						<thead>
-							<tr><th class="text-center">ID</th><th>Username</th><th>Role</th><th>Account</th></tr>
+							<tr><th class="text-center">ID</th><th>Bank Name</th><th>State</th></tr>
 						</thead>
 						<tbody>
-							<tr><td class="text-center">1</td><td>Joe Bloggs</td><td>Super Admin</td><td>AZ23045</td></tr>
-							<tr><td class="text-center">2</td><td>Timothy Hernandez</td><td>Admin</td><td>AU24783</td></tr>
-							<tr><td class="text-center">3</td><td>Joe Bickham</td><td>User</td><td>AM23781</td></tr>
+							<tr ng-repeat="bank in savingsData"><td class="text-center">{{$index + 1}}</td><td>{{bank.BankName}}</td><td>{{bank.state}}</td></tr>
+							
 						</tbody>
 					</table>
         		</div>
@@ -55,10 +54,10 @@
 				<div class="table-responsive">
 					<table class="table">
 						<thead>
-							<tr><th class="text-center">ID</th><th>Username</th><th>Role</th><th>Account</th></tr>
+						  <tr><th class="text-center">ID</th><th>Bank Name</th><th>State</th></tr>
 						</thead>
 						<tbody>
-						  <tr ng-repeat="data in checkingData"><td class="text-center">1</td><td>{{data.name}}</td><td>{{data.ROI}}</td><td>AZ23045</td></tr>
+						  <tr ng-repeat="bank in checkingData"><td class="text-center">{{$index + 1}}</td><td>{{bank.BankName}}</td><td>{{bank.state}}</td></tr>
 						  
 
 						  

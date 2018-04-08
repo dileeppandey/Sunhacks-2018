@@ -18,6 +18,11 @@ body {
   color : #0D3349;
   aligment : center;
 }
+
+#location-title {
+  padding:16px;
+}
+
 .sidenav {
   height: 100%;
   width: 200px;

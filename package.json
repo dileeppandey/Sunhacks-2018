@@ -6,6 +6,7 @@
     "start": "nodemon ./bin/www"
   },
   "dependencies": {
+    "arraylist": "^0.1.0",
     "bootstrap": "^4.0.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -16,6 +17,7 @@
     "morgan": "~1.9.0",
     "mysql": "^2.15.0",
     "popper.js": "^1.14.3",
+    "q": "^1.5.1",
     "sqlite3": "^4.0.0"
   },
   "devDependencies": {

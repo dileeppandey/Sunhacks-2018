@@ -28,7 +28,7 @@ function MasterCtrl($scope, $cookieStore, $http) {
     getLocation();
 
     function showPosition(position) {
-        var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + position.coords.latitude + ',' + position.coords.longitude + '&location_type=ROOFTOP&key=AIzaSyDitdbIu--H19tT3oIv8YnfrQ1b-eJ5Xrk';
+        var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + position.coords.latitude + ',' + position.coords.longitude + '&key=AIzaSyDitdbIu--H19tT3oIv8YnfrQ1b-eJ5Xrk';
         console.log(url);
         $http({
             method: 'GET',

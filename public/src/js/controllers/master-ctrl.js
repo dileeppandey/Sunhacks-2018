@@ -81,9 +81,11 @@ function MasterCtrl($scope, $cookieStore, $http) {
         // what the backend is sending
         // To check the response, you can console.log(res) to see json structure
         // coming from the server
-        console.log(res.data);
+	console.log("-------")
+        console.log(res);
         $scope.sideBarOptions = res.data
     }).catch(function (err) {
+	console.log("/////")
         console.log(err)
     })
    // $scope.sideBarOptions = ["Banking", "Govenment Id", "Investments", "Telephonic Carrier"];

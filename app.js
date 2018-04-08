@@ -18,6 +18,7 @@ var connection = mysql.createConnection({
 });
 
 connection.connect();
+console.log("Connected");
 
 
 // view engine setup

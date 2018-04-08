@@ -14,15 +14,15 @@ var connection = mysql.createConnection({
 
 var app = express();
 
-fetch_Navbar()
-    .then(function(rows){
-        // This function get called, when success
-        console.log(rows);
-    },function(error){
-        // This function get called, when error
-        console.log(error);
-
-    });
+// fetch_Navbar()
+//     .then(function(rows){
+//         // This function get called, when success
+//         console.log(rows);
+//     },function(error){
+//         // This function get called, when error
+//         console.log(error);
+//
+//     });
 
 function fetch_Navbar() {
     var deferred = q.defer();

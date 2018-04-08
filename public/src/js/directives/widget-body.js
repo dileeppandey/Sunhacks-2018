@@ -14,7 +14,7 @@ function rdWidgetBody() {
             classes: '@?'
         },
         transclude: true,
-        template: '<div class="widget-body" ng-class="classes"><rd-loading ng-show="loading"></rd-loading><div ng-hide="loading" class="widget-content" ng-transclude></div></div>',
+        template: '<div class="widget-body" style="padding:30px 20px" ng-class="classes"><rd-loading ng-show="loading"></rd-loading><div ng-hide="loading" class="widget-content" ng-transclude></div></div>',
         restrict: 'E'
     };
     return directive;

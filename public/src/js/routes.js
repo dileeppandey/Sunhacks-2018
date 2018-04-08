@@ -21,7 +21,8 @@ angular.module('RDash').config(['$stateProvider', '$urlRouterProvider',
             })
 	    .state('Banking', {
                 url: '/Banking',
-                templateUrl: 'templates/banking.html'
+                templateUrl: 'templates/banking.html',
+		controller : 'BankingController'
             })
 	    .state('government_id', {
                 url: '/Government Id',

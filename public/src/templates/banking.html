@@ -2,21 +2,22 @@
 	<div class="col-md-6 col-xs-12">
 		<rd-widget>
 			<rd-widget-body>
-				<div class="widget-icon green pull-left">
+				<div class="widget-icon green pull-left" style="position:relative;top:-12px">
 					<i class="fa fa-users"></i>
 				</div>
 				<div class="title">Saving</div>
-		
+				<div class="comment"></div>
 			</rd-widget-body>
 		</rd-widget>
 	</div>
 	<div class="col-md-6 col-xs-12">
 		<rd-widget>
 			<rd-widget-body>
-				<div class="widget-icon red pull-left">
+				<div class="widget-icon red pull-left" style="position:relative;top:-12px">
 					<i class="fa fa-tasks"></i>
 				</div>
 				<div class="title">Checking</div>
+				<div class="comment"></div>
 			</rd-widget-body>
 		</rd-widget>
 	</div>
@@ -57,9 +58,10 @@
 							<tr><th class="text-center">ID</th><th>Username</th><th>Role</th><th>Account</th></tr>
 						</thead>
 						<tbody>
-							<tr><td class="text-center">1</td><td>Joe Bloggs</td><td>Super Admin</td><td>AZ23045</td></tr>
-							<tr><td class="text-center">2</td><td>Timothy Hernandez</td><td>Admin</td><td>AU24783</td></tr>
-							<tr><td class="text-center">3</td><td>Joe Bickham</td><td>User</td><td>AM23781</td></tr>
+						  <tr ng-repeat="data in checkingData"><td class="text-center">1</td><td>{{data.name}}</td><td>{{data.ROI}}</td><td>AZ23045</td></tr>
+						  
+
+						  
 						</tbody>
 					</table>
         		</div>
